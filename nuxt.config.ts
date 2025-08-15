@@ -17,6 +17,8 @@ export default defineNuxtConfig({
             ],
             link: [
                 { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
+                { rel: 'apple-touch-icon', href: '/favicon.png' },
+                { rel: 'apple-touch-icon-precomposed', href: '/favicon.png' },
                 {
                     rel: 'stylesheet',
                     href: 'https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap',
@@ -40,7 +42,7 @@ export default defineNuxtConfig({
         locales: [
             { code: 'da', file: 'da.json' },
             { code: 'de', file: 'de.json' },
-            { code: 'el', file: 'fr.json' },
+            { code: 'el', file: 'el.json' },
             { code: 'en', file: 'en.json' },
             { code: 'es', file: 'es.json' },
             { code: 'fr', file: 'fr.json' },
@@ -65,6 +67,7 @@ export default defineNuxtConfig({
         optimizeDeps: { include: ['quill'] },
     },
 
+    ssr: true,
     router: {
         options: { linkExactActiveClass: 'active' },
     },
